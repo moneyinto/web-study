@@ -32,8 +32,9 @@ body {
 }
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /** 自定义一些基础样式 */
@@ -85,11 +86,41 @@ body {
 
 ```html
 <!-- header 盒子 这里就用到我们准备好的盒子样式 -->
-<div class="header web_ui_box">
-    <!-- 左边的掏字 -->
+<div class="header web_ui_box center">
+    <!-- 左边的淘字 -->
     <img class="header_icon" src="./img/1.png" />
 
     <!-- 右边撑满的盒子 -->
-    
+    <div class="input_box web_ui_item">
+        寻找宝贝店铺 <!-- 没有图标，此处省略，😝 -->
+    </div>
 </div>
+```
+
+- 现在我们在style.css文件里补全css
+
+```css
+.header {
+    position: fixed; /** 浮动 */
+    top: 0; /** 距离窗口顶部为0 */
+    width: 100%; /** 宽度 100% */
+    left: 0; /** 距离窗口左边为0 */
+    padding: 10px 6px; /** 内边距 上下10px 左右6px */
+    background-color: #FF852A; /** 背景颜色 */
+    height: 44px;
+}
+
+.header_icon {
+    width: 27px;
+    margin-right: 10px; /** 淘字距离左边 10像素的距离 */
+}
+
+.input_box {
+    height: 32px;
+    line-height: 32px; /** 设置行高为32px，和height等高，为了实现文字上下居中 */
+    text-align: center; /** 设置文字左右居中 */
+    background-color: #FF4E22;
+    border-radius: 4px; /** 设置圆角4像素 */
+    color: #F0E0DC; /** 设置字体颜色 */
+}
 ```
