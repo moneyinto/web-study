@@ -1,0 +1,32 @@
+body {
+    font-family: '微软雅黑'; /** 设置字体库 */
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+
+/** 自定义一些基础样式 */
+
+/** 我们的盒子 */
+.web_ui_box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+/** 让盒子里的东西上下居中显示 */
+.web_ui_box.center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+/** 盒子里的元素撑开填满剩余空间的样式 */
+.web_ui_item {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 0;
+}
